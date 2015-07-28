@@ -79,6 +79,13 @@ NSString *const SCNavigateJS = @"history.replaceState(null, null, '%@');e=new Ev
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
+    //
+    //Title Bar visibility
+    //
+    self.window.titleVisibility = NSWindowTitleHidden;
+    self.window.titlebarAppearsTransparent = YES;
+    self.window.styleMask |= NSFullSizeContentViewWindowMask;
+    
     [_window setFrameAutosaveName:@"SoundCleod"];
     
     self.mediaKeyListener = [[SPMediaKeyTap alloc] initWithDelegate:self];
